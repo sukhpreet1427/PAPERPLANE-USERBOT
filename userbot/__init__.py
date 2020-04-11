@@ -9,11 +9,11 @@ import os
 from distutils.util import strtobool as sb
 from logging import DEBUG, INFO, basicConfig, getLogger
 from sys import version_info
+
 from dotenv import load_dotenv
 from pyDownload import Downloader
 from pylast import LastFMNetwork, md5
 from pymongo import MongoClient
-import redis
 from redis import StrictRedis
 from requests import get
 from telethon import TelegramClient
@@ -61,8 +61,6 @@ MONGO_DB_URI = os.environ.get("MONGO_DB_URI", None)
 
 SCREENSHOT_LAYER_ACCESS_KEY = os.environ.get("SCREENSHOT_LAYER_ACCESS_KEY",
                                              None)
-REDIS_ENDPOINT = os.environ.get('redis_endpoint', False)
-REDIS_PASSWORD = os.environ.get('redis_password', False)
 
 OPEN_WEATHER_MAP_APPID = os.environ.get("OPEN_WEATHER_MAP_APPID", None)
 
@@ -128,28 +126,16 @@ def is_mongo_alive():
 # Init Redis
 # Redis will be hosted inside the docker container that hosts the bot
 # We need redis for just caching, so we just leave it to non-persistent
+REDIS = StrictRedis(host='localhost', port=6379, db=0)
 
-if REDIS_ENDPOINT and REDIS_PASSWORD:
-    REDIS_HOST = REDIS_ENDPOINT.split(':')[0]
-    REDIS_PORT = REDIS_ENDPOINT.split(':')[1]
-    redis_connection = redis.Redis(
-        host=REDIS_HOST, port=REDIS_PORT, password=REDIS_PASSWORD
-    )
+
+def is_redis_alive():
     try:
-        redis_connection.ping()
-    except Exception as e:
-        LOGGER.exception(e)
-        print()
-        LOGGER.error(
-            "Make sure you have the correct Redis endpoint and password "
-            "and your machine can make connections."
-        )
-        sys.exit(1)
-    LOGGER.debug("Connected to Redis successfully!")
-    redis_db = redis_connection
-    if not sql_session.exists():
-        LOGGER.debug("Using Redis session!")
-        session = RedisSession("userbot", redis_connection)
+        REDIS.ping()
+        return True
+    except BaseException:
+        return False
+
 
 # Download binaries for gen_direct_links module, give correct perms
 if not os.path.exists('bin'):
