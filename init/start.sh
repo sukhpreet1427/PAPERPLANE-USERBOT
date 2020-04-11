@@ -5,6 +5,7 @@
 # you may not use this file except in compliance with the License.
 #
 
+pkg install redis -y
 redis-server --daemonize yes
 nohup redis-server &
 redis-cli ping
