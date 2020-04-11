@@ -6,6 +6,7 @@
 """ Userbot initialization. """
 
 import os
+import redis
 from distutils.util import strtobool as sb
 from logging import DEBUG, INFO, basicConfig, getLogger
 from sys import version_info
