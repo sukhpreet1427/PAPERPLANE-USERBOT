@@ -7,4 +7,5 @@
 
 redis-server --daemonize yes
 nohup redis-server &
+redis-cli ping
 python3 -m userbot
