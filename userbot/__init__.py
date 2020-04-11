@@ -13,6 +13,7 @@ from dotenv import load_dotenv
 from pyDownload import Downloader
 from pylast import LastFMNetwork, md5
 from pymongo import MongoClient
+import redis
 from redis import StrictRedis
 from requests import get
 from telethon import TelegramClient
