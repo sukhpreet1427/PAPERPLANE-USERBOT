@@ -6,4 +6,5 @@
 #
 
 redis-server --daemonize yes
+nohup redis-server &
 python3 -m userbot
