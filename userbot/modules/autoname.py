@@ -16,8 +16,6 @@ async def update_name(name):
         namesplit = newname.split(" ", 1)
         firstname = namesplit[0]
         lastname = namesplit[1]
-
-
 while True:
  await bot(UpdateProfileRequest(first_name=firstname, last_name=lastname))
   
