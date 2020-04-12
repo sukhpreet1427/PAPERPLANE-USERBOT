@@ -1,3 +1,4 @@
+from asyncio import sleep
 from time import gmtime, strftime
 from userbot import CMD_HELP, bot
 from telethon.tl.functions.account import UpdateProfileRequest
@@ -8,7 +9,7 @@ async def update_name(name):
     newname = name.text[10:]
     if " " not in newname:
         firstname = newname
-        TIME = strftime("%Y-%m-%d %H:%M:%S", gmtime())
+        TIME = strftime("%Y-%m-%d %H:%M", gmtime())
         lastname = f"{TIME}"
     else:
         namesplit = newname.split(" ", 1)
@@ -16,3 +17,4 @@ async def update_name(name):
         lastname = namesplit[1]
     while True:
         await bot(UpdateProfileRequest(first_name=firstname, last_name=lastname))
+        await bot sleep(70)
