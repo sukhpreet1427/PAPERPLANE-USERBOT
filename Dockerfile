@@ -3,7 +3,7 @@ FROM baalajimaestro/userbot_python:latest
 ENV PATH="/app/bin:$PATH"
 WORKDIR /app
 
-RUN git clone https://Ayush1311:Ayushtheman@2003@github.com/PAPERPLANE-REBORN.git -b master /app
+RUN git clone https://github.com/Ayush1311/PAPERPLANE-REBORN.git -b master /app
 
 #
 # Copies session and config(if it exists)
