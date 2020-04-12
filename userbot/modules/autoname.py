@@ -18,6 +18,6 @@ async def update_name(name):
         lastname = namesplit[1]
 
 
-       while True:
-             await bot(UpdateProfileRequest(first_name=firstname, last_name=lastname))
+while True:
+      await bot(UpdateProfileRequest(first_name=firstname, last_name=lastname))
   
