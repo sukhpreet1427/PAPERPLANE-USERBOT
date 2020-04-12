@@ -1,5 +1,3 @@
-""AUTO PROFILE UPDATATION BY""
-
 import os
 import time
 from userbot import CMD_HELP, bot
