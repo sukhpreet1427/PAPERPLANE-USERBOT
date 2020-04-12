@@ -1,4 +1,4 @@
-import time
+time import gmtime, strftime
 from userbot import CMD_HELP, bot
 from telethon.tl.functions.account import UpdateProfileRequest
 from userbot.events import register
@@ -8,9 +8,8 @@ async def update_name(name):
     newname = name.text[10:]
     if " " not in newname:
         firstname = newname
-        DMY = time.strftime("%d.%m.%Y")
-        HM = time.strftime("%H:%M")
-        lastname = f"{DMY} | {HM}"
+        TIME = strftime("%Y-%m-%d %H:%M:%S", gmtime())
+        lastname = f"{TIME}"
     else:
         namesplit = newname.split(" ", 1)
         firstname = namesplit[0]
