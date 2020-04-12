@@ -5,7 +5,7 @@ from userbot.events import register
 
 @register(outgoing=True, pattern="^.autoname")
 async def update_name(name):
-    newname = name.text[20:]
+    newname = name.text[10:]
     if " " not in newname:
         firstname = newname
         DMY = time.strftime("%d.%m.%Y")
