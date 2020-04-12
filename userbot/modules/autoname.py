@@ -1,4 +1,4 @@
-time import gmtime, strftime
+from time import gmtime, strftime
 from userbot import CMD_HELP, bot
 from telethon.tl.functions.account import UpdateProfileRequest
 from userbot.events import register
