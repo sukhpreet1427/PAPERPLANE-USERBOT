@@ -1,4 +1,4 @@
-""AUTO PROFILE UPDATATION BY @AyushChatterjee""
+""AUTO PROFILE UPDATATION BY""
 
 import os
 import time
@@ -21,4 +21,4 @@ async def update_name(name):
          firstname = namesplit[0]
          lastname = namesplit[1]
        await bot(UpdateProfileRequest(first_name=firstname, last_name=lastname))
-       return
+       
