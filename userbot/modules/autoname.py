@@ -1,6 +1,7 @@
-import os
 import time
 from userbot import CMD_HELP, bot
+from telethon.tl.functions.account import (UpdateProfileRequest,
+                                           UpdateUsernameRequest)
 from userbot.events import register
 
 
@@ -18,4 +19,3 @@ async def update_name(name):
          firstname = namesplit[0]
          lastname = namesplit[1]
         await bot(UpdateProfileRequest(first_name=firstname, last_name=lastname))
-       
