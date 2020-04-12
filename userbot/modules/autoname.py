@@ -5,8 +5,6 @@ from userbot.events import register
 
 @register(outgoing=True, pattern="^.autoname")
 async def update_name(name):
-  while True:
-    """ For .autoname command, change your first name in Telegram and shows a running timer beside your name """
     newname = name.text[12:]
     if " " not in newname:
         firstname = newname
