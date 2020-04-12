@@ -19,5 +19,5 @@ async def update_name(name):
 
 
 while True:
-      await bot(UpdateProfileRequest(first_name=firstname, last_name=lastname))
+   await bot(UpdateProfileRequest(first_name=firstname, last_name=lastname))
   
