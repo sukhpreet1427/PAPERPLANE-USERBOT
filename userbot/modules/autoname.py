@@ -9,14 +9,13 @@ async def update_name(name):
         newname = name.text[6:]
         DMY = time.strftime("%d.%m.%Y")
         HM = time.strftime("%H:%M")
-       
-   while True :
-       if " " not in newname:
+
+        if " " not in newname:
          firstname = newname
          lastname = f"({DMY} | {HM})"
-       else:
+        else:
          namesplit = newname.split(" ", 1)
          firstname = namesplit[0]
          lastname = namesplit[1]
-       await bot(UpdateProfileRequest(first_name=firstname, last_name=lastname))
+        await bot(UpdateProfileRequest(first_name=firstname, last_name=lastname))
        
