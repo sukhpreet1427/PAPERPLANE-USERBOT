@@ -6,10 +6,9 @@ from telethon.tl.functions.account import (UpdateProfileRequest,
 from userbot.events import register
 @register(outgoing=True, pattern="^.autoname")
 async def update_name(name):
-    """ For .autoname command, change your first name in Telegram and shows a running timer beside your name """
-        DMY = time.strftime("%d.%m.%Y")
-        HM = time.strftime("%H:%M")
-        firstname = f"rootayush:~# ({DMY} | {HM})"
+               DMY = time.strftime("%d.%m.%Y")
+               HM = time.strftime("%H:%M")
+               firstname = f"rootayush:~# ({DMY} | {HM})"
 
     while True:
         await bot(UpdateProfileRequest(first_name=firstname))
