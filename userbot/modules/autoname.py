@@ -10,7 +10,7 @@ from userbot.events import register
 async def update_name(name):
         newname = name.text[6:]
         DMY = time.strftime("%d.%m.%Y")
-        HM = time.strftime("%H:%M:%S")
+        HM = time.strftime("%H:%M")
        
    while True :
        if " " not in newname:
