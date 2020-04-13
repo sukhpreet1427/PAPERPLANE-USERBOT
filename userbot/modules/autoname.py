@@ -7,7 +7,7 @@ from userbot.events import register
 
 DEL_TIME_OUT = 70
 
-@register(outgoing=True, pattern="^.autoname$")
+@register(outgoing=True, pattern="^.autoname")
 async def _(event):
     if event.fwd_from:
         return
