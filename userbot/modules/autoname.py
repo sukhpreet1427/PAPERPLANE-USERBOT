@@ -16,9 +16,7 @@ async def _(event):
         HM = time.strftime("%H:%M")
         name = f"⌚{HM} | ayush | 📅{DM}"
         try:
-            await bot(functions.account.UpdateProfileRequest(  
-                first_name=name
-            ))
+            await bot(UpdateProfileRequest(first_name=name))
         except FloodWaitError as ex:
             await asyncio.sleep(ex.seconds)
         await asyncio.sleep(DEL_TIME_OUT)
