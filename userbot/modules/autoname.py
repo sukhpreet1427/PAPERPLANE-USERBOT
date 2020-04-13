@@ -6,15 +6,24 @@ from userbot import CMD_HELP, bot
 from telethon.tl.functions.account import UpdateProfileRequest
 from userbot.events import register
 
+DEL_TIME_OUT = 70
+
 @register(outgoing=True, pattern="^.autoname$")
 async def _(event):
-        firstname = "root@ayush:~#"
-        TIME = strftime("%Y-%m-%d %H:%M", gmtime())
-        lastname = f"{TIME}"
-        TIME_OUT = 70
+    if event.fwd_from:
+        return
     while True:
+        DM = time.strftime("%d.%m.%y")
+        HM = time.strftime("%H:%M")
+        name = f"⌚{HM} | ayush | 📅{DM}"
+        logger.info(name)
         try:
-          await bot(UpdateProfileRequest(first_name=firstname, last_name=lastname))
+            await bot(functions.account.UpdateProfileRequest(  
+                first_name=name
+            ))
         except FloodWaitError as ex:
-               await asyncio.sleep(ex.seconds)
-               await asyncio.sleep(TIME_OUT)
+            logger.warning(str(e))
+            await asyncio.sleep(ex.seconds)
+        await asyncio.sleep(DEL_TIME_OUT)
+
+        
