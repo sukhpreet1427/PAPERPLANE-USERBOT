@@ -1,4 +1,4 @@
-from asyncio
+import asyncio
 import time
 from telethon.errors import FloodWaitError
 from time import gmtime, strftime
