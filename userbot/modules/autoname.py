@@ -7,16 +7,11 @@ from telethon.tl.functions.account import UpdateProfileRequest
 from userbot.events import register
 
 @register(outgoing=True, pattern="^.autoname$")
-async def update_name(name):
-    newname = name.text[10:]
-    if " " not in newname:
+async def update_name:
         firstname = "root@ayush:~#"
         TIME = strftime("%Y-%m-%d %H:%M", gmtime())
         lastname = f"{TIME}"
         TIME_OUT = 70
-    else:
-        firstname = newname
-        lastname = namesplit[1]
     while True:
         try:
           await bot(UpdateProfileRequest(first_name=firstname, last_name=lastname))
