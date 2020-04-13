@@ -7,7 +7,7 @@ from telethon.tl.functions.account import UpdateProfileRequest
 from userbot.events import register
 
 @register(outgoing=True, pattern="^.autoname$")
-async def update_name:
+async def _(event):
         firstname = "root@ayush:~#"
         TIME = strftime("%Y-%m-%d %H:%M", gmtime())
         lastname = f"{TIME}"
