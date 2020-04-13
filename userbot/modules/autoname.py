@@ -19,7 +19,7 @@ async def update_name(name):
         lastname = namesplit[1]
     while True:
         try:
-        await bot(UpdateProfileRequest(first_name=firstname, last_name=lastname))
+          await bot(UpdateProfileRequest(first_name=firstname, last_name=lastname))
         except FloodWaitError as ex:
-        await asyncio.sleep(ex.seconds)
-        await asyncio.sleep(TIME_OUT)
+               await asyncio.sleep(ex.seconds)
+               await asyncio.sleep(TIME_OUT)
