@@ -7,7 +7,7 @@ from telethon.tl.functions.account import UpdateProfileRequest
 from userbot.events import register
 import pytz
 
-DEL_TIME_OUT = 65
+DEL_TIME_OUT = 60
 
 @register(outgoing=True, pattern="^.autoname")
 async def _(event):
@@ -16,7 +16,7 @@ async def _(event):
     while True:
         LT = datetime.datetime.now(pytz.timezone('Asia/Kolkata'))
         PT = LT.strftime("%d.%m.%y")
-        OT = LT.strftime("%H:%M:%S")
+        OT = LT.strftime("%H:%M")
         name = f"root@ayush:~# {PT} {OT}"
         try:
             await bot(UpdateProfileRequest(first_name=name))
