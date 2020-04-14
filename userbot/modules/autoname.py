@@ -17,7 +17,7 @@ async def _(event):
     while True:
         DM = time.strftime("%d.%m.%y")
         HM = time.strftime("%H:%M")
-        name = f"**root@ayush:~# {datetime}**"
+        name = f"**root@ayush:~# {DM} {HM}**"
         try:
             await bot(UpdateProfileRequest(first_name=name))
         except FloodWaitError as ex:
