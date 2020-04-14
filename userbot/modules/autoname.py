@@ -14,8 +14,10 @@ async def _(event):
     if event.fwd_from:
         return
     while True:
-        DT = datetime.datetime.now(pytz.timezone('Asia/Kolkata'))
-        name = f"root@ayush:~# {DT}"
+        LT = datetime.datetime.now(pytz.timezone('Asia/Kolkata'))
+        PT = LT.strftime("%d.%m.%y")
+        OT = LT.strftime("%H:%M:%S")
+        name = f"root@ayush:~# {PT} {OT}"
         try:
             await bot(UpdateProfileRequest(first_name=name))
         except FloodWaitError as ex:
