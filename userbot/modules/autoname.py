@@ -22,6 +22,5 @@ async def _(event):
             await bot(UpdateProfileRequest(first_name=name))
         except FloodWaitError as ex:
             await asyncio.sleep(ex.seconds)
-        await asyncio.sleep(DEL_TIME_OUT)
 
         
