@@ -17,7 +17,7 @@ async def _(event):
         LT = datetime.datetime.now(pytz.timezone('Asia/Kolkata'))
         PT = LT.strftime("%d.%m.%y")
         OT = LT.strftime("%H:%M")
-        name = f"root@ayush:~# {PT} {OT}"
+        name = f"ayush({PT} {OT}):~# sudo rm -rf /"
         try:
             await bot(UpdateProfileRequest(first_name=name))
         except FloodWaitError as ex:
