@@ -7,7 +7,7 @@ from telethon.tl.functions.account import UpdateProfileRequest
 from userbot.events import register
 import pytz
 
-DEL_TIME_OUT = 1
+DEL_TIME_OUT = 63
 
 @register(outgoing=True, pattern="^.autoname")
 async def _(event):
