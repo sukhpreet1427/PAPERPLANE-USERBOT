@@ -22,7 +22,7 @@ UNAPPROVED_MSG = (
     "`My master hasn't approved you to PM.\n\n`"
     "`Please wait for my master to look in, he mostly approves PMs.\n\n`"
     "`As far as I know, he doesn't usually approve retards though.\n\n`"
-    "`You can better talk to him freely anytime here ==>` @AYSHACKS")
+    "`You can better talk to him freely anytime here ==>` @AYSHACKS2")
 # =================================================================
 
 
