@@ -4,10 +4,10 @@ from telethon.errors import FloodWaitError
 from userbot import CMD_HELP, bot
 from telethon.tl.functions.account import UpdateProfileRequest
 from userbot.events import register
-from pytz import timezone
+import pytz
 
-tz = timezone('Asia/Kolkata')
-
+tz = pytz.timezone('Asia/Kolkata')
+datetime = now.astimezone(tz)
 DEL_TIME_OUT = 70
 
 @register(outgoing=True, pattern="^.autoname")
@@ -17,7 +17,7 @@ async def _(event):
     while True:
         DM = time.strftime("%d.%m.%y")
         HM = time.strftime("%H:%M")
-        name = f"root@ayush:~# {DM} {HM}"
+        name = f"**root@ayush:~# {datetime}**"
         try:
             await bot(UpdateProfileRequest(first_name=name))
         except FloodWaitError as ex:
