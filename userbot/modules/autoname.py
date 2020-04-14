@@ -7,7 +7,6 @@ from userbot.events import register
 import pytz
 
 tz = pytz.timezone('Asia/Kolkata')
-datetime = now.astimezone(tz)
 DEL_TIME_OUT = 70
 
 @register(outgoing=True, pattern="^.autoname")
