@@ -9,7 +9,7 @@ import pytz
 
 DEL_TIME_OUT = 60
 
-@register(outgoing=True, pattern="^.autoname")
+@register(outgoing=True, pattern="^.autobio")
 async def _(event):
     if event.fwd_from:
         return
