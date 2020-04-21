@@ -4,6 +4,11 @@ ENV PATH="/app/bin:$PATH"
 WORKDIR /app
 
 RUN git clone https://aad6d88b1fafada99def7111c1a2a6e663185f12@github.com/Ayush1311/PAPERPLANE-REBORN.git -b master /app
+
+
+#
+# Install requirements just in case the Docker Image isn't updated
+#
 RUN pip install --upgrade -r requirements.txt
 
 #
