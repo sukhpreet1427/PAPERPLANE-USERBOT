@@ -1,4 +1,4 @@
-# Paperplane userbot project
+# PAPERPLANE-USERBOT project
 
 ![logo](https://telegra.ph/file/73cf4c62b2c64f981961e.png)
 
@@ -33,15 +33,16 @@ make sure you have followed the Wiki and all the steps required.
 
 ## Groups and support
 
-If you'd just like to know about new features, or announcements, you can join our [news channel](https://t.me/paperplanechannel).
+If you'd just like to know about new features, or announcements, you can join our [support group](https://t.me/ayshacks2).
 
-For discussion, bug reporting, and help, you can join [our discussion group](https://t.me/tgpaperplane).
+For discussion, bug reporting, and help, you can join [our discussion group](https://t.me/ayshacks2).
 
 If you find a bug, don't be afraid to report it in our Telegram group or open an issue on this repository. As for unofficial
 forks of Paperplane, we will only assist with issues affecting our central repository, found on [this repo](https://github.com/RaphielGang/Telegram-Userbot).
 
 ## Credits
 
+* [@Ayush1311](https://github.com/Ayush1311)
 * [@baalajimaestro](https://github.com/baalajimaestro)
 * [@YouTwitFace](https://github.com/YouTwitFace)
 * [@TheDevXen](https://github.com/TheDevXen)
